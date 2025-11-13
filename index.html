@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eye Tracker Demo — WebGazer.js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Eye Tracker Demo</h1>
+    <p class="muted">Dựa trên giao diện trong file gốc — Hiển thị chấm vị trí ánh nhìn (dot). Hỗ trợ desktop & mobile (yêu cầu HTTPS hoặc localhost).</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <button id="startBtn">Bắt đầu</button>
+      <button id="stopBtn" disabled>Dừng</button>
+      <button id="calibBtn">Hiệu chỉnh (Calibrate)</button>
+      <label class="toggle-label"><input type="checkbox" id="toggleDot" checked> Hiển thị chấm</label>
+      <label>Màu chấm: <input type="color" id="dotColor" value="#ff2d55"></label>
+      <div id="status">Trạng thái: Chưa khởi động</div>
+    </section>
+
+    <section id="trackerArea">
+      <p class="hint">Khi hiệu chỉnh, bấm vào các chấm nhỏ xuất hiện. Cho camera quyền truy cập khi trình duyệt hỏi.</p>
+      <div id="gazeDot" aria-hidden="true"></div>
+      <div id="calibOverlay" aria-hidden="true"></div>
+    </section>
+
+    <section id="notes">
+      <h3>Ghi chú</h3>
+      <ul>
+        <li>Chạy trên <strong>https://</strong> hoặc <strong>localhost</strong> để trình duyệt cho phép truy cập camera.</li>
+        <li>Độ chính xác sẽ cải thiện nếu thực hiện hiệu chỉnh (calibration).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>WebGazer.js integration — demo build</small>
+  </footer>
+
+  <!-- WebGazer from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/webgazer@3.4.0/dist/webgazer.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

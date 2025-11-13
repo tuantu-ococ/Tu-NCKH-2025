@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+.gaze-cursor {
+  width: 20px; height: 20px; border-radius: 9999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  position: absolute; pointer-events: none; transform: translate(-50%, -50%);
+  z-index: 60; border: 2px solid rgba(255,255,255,0.9);
+  transition: left 0.06s linear, top 0.06s linear;
+}
